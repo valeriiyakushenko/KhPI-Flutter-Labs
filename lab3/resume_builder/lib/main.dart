@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
-import 'app/app.dart';
+import 'router/app_router.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ResumeApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ResumeApp extends StatelessWidget {
+  const ResumeApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const ResumeApp();
+    return MaterialApp.router(
+      title: 'Resume Builder',
+      theme: ThemeData(primarySwatch: Colors.teal),
+      routerConfig: router,
+    );
   }
 }
